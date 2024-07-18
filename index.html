@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car World</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        .box{
+            height: 430px;
+        }
+    </style>
+  </head>
+  <body>
+    <h1 class="text-info text-center mt-5 mb-4">Car World</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="container box border p-5 shadow-lg border-5 rounded">
+            <h1 class="text-center text-info">Enter Details</h1>
+            <label for="brand">Car Brand</label>
+            <input
+              type="text"
+              name="brand"
+              id="brand"
+              class="form-control"
+              placeholder="Car Brand"
+            />
+            <label for="Price" class="price">Price</label>
+            <input
+              type="text"
+              name="price"
+              id="price"
+              class="form-control"
+              placeholder="Price"
+            />
+            <label for="key">Key</label>
+            <input
+              type="text"
+              name="key"
+              id="key"
+              class="form-control"
+              placeholder="key"
+            />
+            <div class="text-center">
+              <button class="btn btn-outline-success border-5 shadow-lg mt-4" onclick="storeFunction()">
+                Store Records
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+            <div class="container box border p-5 shadow-lg border-4 rounded">
+                <h1 class="text-center text-info">Enter key to Retrieve item</h1>
+                <label for="key">Key</label>
+                <input type="text" id="retrieveKey" class="form-control" placeholder="Key">
+                <button class="btn btn-outline-primary  border-5 shadow-lg mt-4" onclick="retrieveRecords()">Retrieve Records</button>
+                <div id="result">
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="container box border p-5 shadow-lg border-4 rounded">
+                <h1 class="text-center text-info">Enter key to Delete item</h1>
+                <label for="key">Key</label>
+                <input type="text" id="removeKey" class="form-control" placeholder= "Key">
+                <button class="btn btn-outline-danger  border-5 shadow-lg mt-4" onclick="removeRecords()">Remove Records</button>
+            </div>
+        </div>
+      </div>
+      <button class="btn btn-outline-dark shadow-lg btn-block mt-4" onclick="clearAll()">Clear All Records</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
