@@ -16,15 +16,12 @@ function storeFunction(){
 
 function retrieveRecords(){
     let key=retrieveKey.value;
-    if(!key){
-        alert("Key doesn't Exist")
-    }
-    else{
-        let car=JSON.parse(localStorage.getItem(key));
+    if(key in localStorage){
+       let car=JSON.parse(localStorage.getItem(key));
         result.innerHTML=`
             <div class="card" style="width: 18rem;">
                 <div class="card-header">
-                    Featured
+                    Car Details
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">${car.bName}</li>
@@ -33,6 +30,10 @@ function retrieveRecords(){
                      
                 </ul>
                 </div>`;
+    }
+    else{ 
+        alert("Key doesn't Exist")
+        
     }
 }
 function removeRecords (){
