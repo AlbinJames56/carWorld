@@ -19,13 +19,15 @@
         }
     </style>
   </head>
-  <body>
-    <h1 class="text-info text-center mt-5 mb-4">Car World</h1>
+  <body style="background: rgb(155,255,164);
+background: linear-gradient(56deg, rgba(155,255,164,1) 0%, rgba(141,251,255,1) 47%, rgba(11,122,255,1) 100%);">
+     
+    <h1 class="text-light text-center mt-5 mb-4">Car World</h1>
     <div class="container">
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4 mb-4">
           <div class="container box border p-5 shadow-lg border-5 rounded">
-            <h1 class="text-center text-info">Enter Details</h1>
+            <h1 class="text-center text-light">Enter Details</h1>
             <label for="brand">Car Brand</label>
             <input
               type="text"
@@ -57,9 +59,9 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 mb-4">
             <div class="container box border p-5 shadow-lg border-4 rounded">
-                <h1 class="text-center text-info">Enter key to Retrieve item</h1>
+                <h1 class="text-center text-light">Enter key to Retrieve item</h1>
                 <label for="key">Key</label>
                 <input type="text" id="retrieveKey" class="form-control" placeholder="Key">
                 <button class="btn btn-outline-primary  border-5 shadow-lg mt-4" onclick="retrieveRecords()">Retrieve Records</button>
@@ -68,16 +70,16 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 mb-4">
             <div class="container box border p-5 shadow-lg border-4 rounded">
-                <h1 class="text-center text-info">Enter key to Delete item</h1>
+                <h1 class="text-center text-light">Enter key to Delete item</h1>
                 <label for="key">Key</label>
                 <input type="text" id="removeKey" class="form-control" placeholder= "Key">
                 <button class="btn btn-outline-danger  border-5 shadow-lg mt-4" onclick="removeRecords()">Remove Records</button>
             </div>
         </div>
       </div>
-      <button class="btn btn-outline-dark shadow-lg btn-block mt-4" onclick="clearAll()">Clear All Records</button>
+      <button class="btn btn-outline-dark shadow-lg btn-block mt-4 mb-4" onclick="clearAll()">Clear All Records</button>
     </div>
     <script src="script.js"></script>
   </body>
